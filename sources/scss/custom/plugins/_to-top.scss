@@ -1,0 +1,40 @@
+// ToTop
+.toTop {
+  display: none;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  line-height: 42px;
+  color: #6a757e;
+  background: #fff;
+  border-radius: 50%;
+  @include box-shadow(0px 0px 8px rgba(0,0,0,.2));
+
+  position: fixed;
+  right: 66px;
+  bottom: 180px;
+
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0;
+  z-index: 20;
+
+  &:hover {
+    background: $primary;
+    color: #fff;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: inline-block;
+  }
+}
+
+html.mobile .ui-to-top,
+html.tablet .ui-to-top {
+  display: none !important;
+}

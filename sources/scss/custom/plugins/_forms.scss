@@ -1,0 +1,289 @@
+// Forms
+
+$input-height:				62px;
+$input-max-width:           521px;
+$input-padding-left:		37px;
+$input-padding-right:		21px;
+
+$input-border:				1px solid #b4b4b4;
+$input-border-radius:		62px;
+
+$input-font-family:			$default-font;
+$input-font-size:			20px;
+$input-line-height:			22px;
+$input-font-weight:			400;
+
+$input-uppercase:			true;
+
+$input-color:				#3e3e3e;
+$input-bg:					transparent;
+
+$textarea-height: 			334px;
+
+$placeholder-color: 		$input-color;
+$placeholder-opacity: 		1;
+
+$input-offset:			    0;
+$controls-offset:			0;
+
+$icon-size:                 20px;
+$icon-offset:               41px;
+$icon-offset-position:      left;
+
+$form-feedback-focus-color: $primary;
+$form-feedback-valid-color: $success-color;
+$form-feedback-invalid-color: $danger-color;
+
+
+.rd-form {
+	position: relative;
+	width: 100%;
+}
+
+input:-webkit-autofill ~ label,
+input:-webkit-autofill ~ .form-validation {
+	color: $black !important;
+}
+
+// Form wrap
+.form-wrap {
+	position: relative;
+
+	&.has-error {
+		.form-input {
+			border-color: $form-feedback-invalid-color;
+		}
+	}
+
+	&.has-focus {
+		.form-input {
+			border-color: $form-feedback-focus-color;
+		}
+	}
+}
+
+.form-input {
+	display: block;
+	width: 100%;
+	height: 62px;
+
+	padding-top: floor(($input-height - $input-line-height)/2);
+	padding-bottom: ceil(($input-height - $input-line-height)/2);
+	padding-left: $input-padding-left;
+	padding-right: $input-padding-right;
+
+	border: $input-border;
+	border-radius: $input-border-radius;
+
+	font-family: $input-font-family;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+	font-weight: $input-font-weight;
+	text-transform: uppercase;
+
+	color: $input-color;
+	background: $input-bg;
+
+	@media (max-width: 1199px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+}
+
+.form-label {
+	position: absolute;
+	top: 31px;
+	left: 0;
+	right: 0;
+	padding-left: $input-padding-left;
+	padding-right: $input-padding-right;
+	font-family: $input-font-family;
+	font-size: $input-font-size;
+	line-height: $input-line-height;
+	font-weight: $input-font-weight;
+	text-transform: uppercase;
+	color: $input-color;
+	pointer-events: none;
+	text-align: left;
+	z-index: 9;
+	transition: .25s;
+	will-change: transform;
+	transform: translateY(-50%);
+
+	&.focus {
+		opacity: 0;
+	}
+
+	&.auto-fill {
+		color: $input-color;
+	}
+}
+
+// Form validation
+.form-validation {
+	position: absolute;
+	right: 20px;
+	top: 0;
+	z-index: 11;
+	margin-top: 2px;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 12px;
+	letter-spacing: 0;
+	color: $form-feedback-invalid-color;
+	transition: .3s;
+}
+
+// Form output
+#form-output-global {
+	position: fixed;
+	bottom: 30px;
+	left: 15px;
+	z-index: 2000;
+	visibility: hidden;
+	transform: translate3d(-500px, 0, 0);
+	transition: .3s all ease;
+
+	&.active {
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
+
+	@media (min-width: 576px) {
+		left: 30px;
+	}
+}
+
+.form-output {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 1.2;
+	margin-top: 2px;
+	transition: .3s;
+	opacity: 0;
+	visibility: hidden;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&.error {
+		color: $form-feedback-invalid-color;
+	}
+
+	&.success {
+		color: $form-feedback-valid-color;
+	}
+}
+
+/** @section Snackbars */
+
+.snackbars {
+	padding: 9px 16px;
+	margin-left: auto;
+	margin-right: auto;
+	color: $white;
+	text-align: left;
+	background-color: $gray-800;
+	border-radius: 0;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+
+	font-size: 14px;
+
+	.icon-xxs {
+		font-size: 18px;
+	}
+
+	// padding on text
+	p span:last-child {
+		padding-left: 14px;
+	}
+
+	// snackbar icon on the left side
+	&-left {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+
+	// snackbar link or button on the right side
+	&-right {
+		display: inline-block;
+		float: right;
+		text-transform: uppercase;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media (min-width: 576px) {
+		max-width: 540px;
+		padding: 12px 15px;
+		font-size: 15px;
+	}
+}
+
+
+
+// Button
+.form-button {
+
+	> * {
+		transition: .4s all ease-in-out;
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		padding: 19px 30px;
+		margin-top: 10px;
+		font-size: 22px;
+		line-height: 24px;
+		font-weight: 700;
+		font-family: $default-font;
+		text-transform: uppercase;
+		border-radius: 62px;
+		background: $primary;
+
+		.fa-arrow-circle-o-right {
+			margin-left: 10px;
+			position: relative;
+			top: -1px;
+		}
+
+		&:hover {
+			background: $secondary;
+		}
+
+		&:active {
+			background: darken($secondary,20%);
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-top: 0;
+			margin-left: 10px;
+		}
+	}
+
+	@media (max-width: 1199px) {
+		display: block;
+	}
+}
+
+.form-inline {
+	@include media-breakpoint-up(md) {
+		display: flex;
+		flex-wrap: wrap;
+
+		.form-wrap {
+			flex: 1 0 auto;
+		}
+
+		.form-button {
+			flex: 0 0 auto;
+		}
+	}
+}

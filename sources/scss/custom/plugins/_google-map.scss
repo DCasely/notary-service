@@ -1,0 +1,31 @@
+/** @section Google Map */
+
+$map-height: 458px;
+$map-height-767: 250px;
+$map-height-479: 200px;
+
+.google-map-markers{
+  display: none;
+}
+
+.google-map-container {
+  width: 100%;
+}
+
+.google-map {
+  height: $map-height;
+  width: 100%;
+
+  img {
+    max-width: none !important;
+  }
+
+  @media (max-width: 767px) {
+    height: $map-height-767;
+  }
+
+  @media (max-width: 479px) {
+    height: $map-height-479;
+  }
+}
+

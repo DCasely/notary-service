@@ -1,0 +1,187 @@
+extends ../_skeleton
+
+block page
+	header
+		.container
+			a.brand( href='./' ): +img( 'logo-inverse-262x262.png' )
+			.owl-carousel( data-nav='true' )
+				.item
+					h2 Give us
+					h3 A chance and we will prove our efficiency!
+					a.btn-lg(href='#') Learn more
+				.item
+					h2 Business
+					h3 Taken to the new
+						br
+						| heights
+					a.btn-lg(href='#') Learn more
+				.item
+					h2 Building
+					h3 your business growth & prosperity
+					a.btn-lg(href='#') Learn more
+
+	section.well-1.hero
+		.container
+			h2.hero_title.center
+				| Offering helpful tips and advice
+				br
+				span to help your business start up
+			p.center At Smartex, we offer professional business consulting and support services. We are passionate about growing business, and we do this through our own highly experienced and capable consultants who have tremendous business acumen. You will benefit from this passion and commitment, together with our professionalism and unique skills.
+
+			.row.row-40.row-md-60.row-xl-80.offset-top-1.center.sm-left.br-hide-md
+				.col-md-6
+					.icon-1.fl-36-slim-icons-pencil98
+					h5 Strategic Planning
+					p Our company provides high-quality, tailored strategic planning services that have been used in corporate, non-profit, and even academic research settings.
+					a.btn(href='#') More
+				.col-md-6
+					.icon-1.fl-36-slim-icons-cogwheel25
+					h5 Business Consulting
+					p Our consulting services will help you better understand business/customer insights and develop an aligned vision, strategy and roadmap to guide transformation efforts of your company.
+					a.btn(href='#') More
+				.col-md-6
+					.icon-1.fl-36-slim-icons-star165
+					h5 Risk Management
+					p In order to avoid risks it is vital that they are recognised, classified, and evaluated. Tiered hierarchies, complex processes, and international integration make risk management necessary.
+					a.btn(href='#') More
+				.col-md-6
+					.icon-1.fl-36-slim-icons-speech105
+					h5 Reviews & Audits
+					p We view audits as an opportunity to review your business, offer an objective viewpoint of your systems and procedures, and advise you of any potential problem areas.
+					a.btn(href='#') More
+
+	+parallax({
+		img: 'parallax1'
+	})
+		.well-2.parallax.parallax-1.center
+			.container
+				h2 Perfect
+				h3
+					| Experience & High Quality
+					br
+					| Service
+				a.btn-lg(href='#') Learn more
+
+	section.well-3.center.sm-left
+		.container
+			h3.center Our advantages
+			.row.row-40.offset-top-3
+				.col-md-4
+					img(src='images/page-1_img01.jpg', alt='')
+					h4 Field Expertise
+					p The main advantage of hiring our team of business consultants is being able to benefit from and use their expertise in your decision-making processes.
+				.col-md-4
+					img(src='images/page-1_img02.jpg', alt='')
+					h4 Neutral & Objective
+					p Our business consultants are not fazed by interoffice politics or distracted by individual passions.They are a fresh pair of eyes outside of your company’s culture.
+				.col-md-4
+					img(src='images/page-1_img03.jpg', alt='')
+					h4 Fixed Cost
+					p With us, you will always know exactly how much it is going to cost you to utilize the expertise of the business consultant you choose to hire.
+
+	+parallax({
+		img: 'parallax2'
+	})
+		.well-4.parallax.parallax-2
+			.container
+				.row
+					.col-lg-9
+						h2 Strategy
+						h3 Is nothing without execution
+						p Our business strategies equip the top management with an integrated framework to discover, analyse, and exploit beneficial opportunities, to sense and meet potential threats. The proper execution of this strategy can bring more stability and profit to your business on a regular basis.
+
+	section.well-5
+		.container
+			ol.index-list.row.row-30
+				li.col-md-6.col-lg-4
+					.box
+						h3
+							a(href='#') fast
+								=' '
+								br
+								| online
+								=' '
+								br
+								| support
+						p We provide qualified online support available 24/7.
+				li.col-md-6.col-lg-4
+					.box
+						h3
+							a(href='#') pro
+								=' '
+								br
+								| services
+								=' '
+								br
+								| & advice
+						p Need a piece of advice for your business? We are ready to help!
+				li.col-md-6.col-lg-4
+					.box
+						h3
+							a(href='#') fresh
+								=' '
+								br
+								| publications
+								=' '
+								br
+								| & articles
+						p Read our latest posts with tips on business consulting.
+
+	footer
+		section.well-6.bg-image.subscribe
+			.container
+				.row.row-30.align-items-center
+					.col-xl-4
+						h3 Newsletter Signup
+						p Subscribe to our newsletter to get regular news and updates to your e-mail.
+					.col-lg-10.col-xl-8
+						form.rd-form.rd-mailform.form-inline(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								input.form-input( id='subscribe-form-email', type='email', name='email', data-constraints="@Email @Required" )
+								label.form-label( for='subscribe-form-email' ) Enter your e-mail
+							.form-button
+								button(type='submit')
+									| Subscribe
+									span.fa-arrow-circle-o-right
+
+		+parallax({
+			img: 'parallax3'
+		})
+			.well-7.parallax
+				.container
+					.row.row-30.align-items-center
+						.col-md-6.col-lg-5
+							.copyright
+								| ©
+								span.copyright-year
+								span.hr
+								|  All Rights Reserved
+								| .
+								br
+								| Design&nbsp;by&nbsp;#[a(href="https://zemez.io/") Zemez]
+
+
+						.col-md-5.col-lg-4.center
+							address 28 Jackson Blvd Ste 1020, Chicago IL 60604-2340
+							ul.inline-list
+								li
+									a.icon-2.fa-twitter(href='#')
+								li
+									a.icon-2.fa-facebook(href='#')
+								li
+									a.icon-2.fa-google-plus(href='#')
+								li
+									a.icon-2.fa-rss(href='#')
+								li
+									a.icon-2.fa-pinterest(href='#')
+
+		//Google Map
+		section.section.map
+			//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+			//Please note that YOUR_API_KEY should replaced with your key.
+			//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+			.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":60}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"lightness":30}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ef8c25"},{"lightness":40}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#b6c54c"},{"lightness":40},{"saturation":-40}]},{}]' )
+				.google-map
+				ul.google-map-markers
+					li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow' )
+

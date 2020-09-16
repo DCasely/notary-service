@@ -1,0 +1,27 @@
+// Variables
+
+// Accent colors
+$primary:       #425371;
+$secondary:     #73797d;
+$default:       #555555;
+$danger-color:  #f5543f;
+$success-color: #98bf44;
+$white:         #fff;
+$black:         #000;
+$gray-800:      #151515;
+
+$default-font: 'Open Sans', sans-serif;
+$primary-font: 'Open Sans Condensed', sans-serif;
+$secondary-font: 'Julius Sans One', sans-serif;
+$default-font-size: 18;
+$default-line-height: 30/18;
+
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px
+);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
