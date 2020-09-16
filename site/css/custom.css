@@ -35,6 +35,14 @@ h3 {
 
   header .btn-lg {
     padding: 10px;
+    background-color: #425371;
+  }
+}
+
+@media (max-width: 767px) {
+  header .btn-lg {
+    padding: 10px;
+    background-color: #425371;
   }
 }
 
