@@ -1,0 +1,51 @@
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* SECTION 1 */
+
+.hero_title span {
+  font-size: 2rem;
+}
+
+.hero_title + p {
+  font-size: 1rem;
+}
+
+/*  SECTION 2 */
+
+/* HEADER  */
+
+@media (min-width: 992px) {
+  header h2 {
+    font-size: 4rem;
+  }
+
+  header h3 {
+    font-size: 3rem;
+  }
+
+  header .btn-lg {
+    padding: 10px;
+  }
+}
+
+/* SECTION */
+
+.parallax-1 h2,
+.parallax-2 h2 {
+  font-size: 3rem;
+}
+
+.parallax-1 h3,
+.parallax-2 h3 {
+  font-size: 2rem;
+}
+
+.parallax-1 .btn-lg {
+  padding: 10px;
+}
